@@ -1,0 +1,67 @@
+/* _messageSentSect */
+
+@import "../mixins";
+
+.messageSentSect {
+	position: relative;
+	height: calc(100% - 176px);
+	min-height: 300px;
+	padding: 0 20px;
+}
+.burger.mS {
+	right: 10px;
+}
+.burger.mS span {
+	background-color: black;
+	animation: none;
+}
+.sentCont {
+	position: relative;
+	padding: 30px 0;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	z-index: 1;
+}
+.sentCont.open, #burgerNoJS:checked ~ .sentCont {
+	z-index: 0;
+}
+.sentHead {
+	text-align: center;
+	font-size: 24px;
+	padding: 0 0 30px 0;
+}
+.sent {
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.sent.open, #burgerNoJS:checked ~ .sentCont .sent {
+	transition: all 0.2s ease-in-out;
+	color: rgba(0, 0, 0, 0);
+}
+.about.mS, .stills.mS {
+	@include transform(translate(0, 0) skew(0deg));
+}
+.motionCont.mS, .motionCont.mS.open, #burgerNoJS:checked ~ .portCont div.motionCont.mS {
+	@include transform(translate(-50%, -386%));
+}
+.aboutCont.mS, .aboutCont.mS.open, #burgerNoJS:checked ~ .portCont div.aboutCont.mS {
+	@include transform(translate(-50%, 66%));
+}
+.stillsCont.mS, .stillsCont.mS.open, #burgerNoJS:checked ~ .portCont div.stillsCont.mS {
+	@include transform(translate(-50%, -166%) skew(0deg));
+}
+.contactCont.mS, .contactCont.mS.open, #burgerNoJS:checked ~ .portCont div.contactCont.mS {
+	@include transform(translate(-50%, 286%));
+}
+.portHead.mS {
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0);
+	z-index: 0;
+}
+.portHead.mS.open, #burgerNoJS:checked ~ .portCont div.headCont a span.portHead.mS {
+	color: rgba(0, 0, 0, 1);
+	z-index: 1;
+}
+.portHead.mS.fade {
+	color: #b8b8b8;
+}

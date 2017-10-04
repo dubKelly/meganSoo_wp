@@ -1,0 +1,53 @@
+@import "mixins";
+@import "reset";
+
+/*_*/
+
+html, body {
+	height: 100%;
+	font-family: "Raleway", sans-serif;
+}
+::-webkit-scrollbar {
+   width: 0px;
+}
+p {
+	line-height: 1.5;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	position: relative;
+}
+.sectionCont {
+	height: 100%;
+	width: 100%;
+}
+.headBefore {
+	position: absolute;
+	left: 50%;
+	height: 40px;
+	width: 1px;
+	background-color: rgba(199, 0, 57, 1);
+}
+.sectionHead {
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 60px 0 60px 6px;
+	letter-spacing: 12px;
+	font-weight: 400;
+}
+
+@import "landingSect";
+@import "aboutSect";
+@import "stillsSect";
+@import "motionSect";
+@import "footer";
+
+@import "pages/contactSect";
+@import "pages/contactFooter";
+@import "pages/messageSentSect";
+
+@import "mediaQueries/mainMq";
