@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'meganSoo_setup' );
 function meganSoo_script_enqueue() {
 
 	wp_enqueue_style( 'meganSooStyle', get_template_directory_uri() . '/styleSheets/css/indexStyles.css', array(), '1.0.0', 'all' );
-	wp_enqueue_script( 'meganSooJs', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'meganSooJs', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'meganSoo_script_enqueue' );
